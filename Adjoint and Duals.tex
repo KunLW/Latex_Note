@@ -1,0 +1,75 @@
+\documentclass{mathnote}
+% \usepackage{amsthm}
+\usepackage{formal}
+\usepackage{favorcmd}
+\usepackage{tikz-cd}
+% \newtheorem{theorem}{Theorem}
+% \newtheorem{definition}{Definition}
+
+\title{Adjoint and Duals}
+\date{22.3.12}
+\begin{document}
+    \section*{Recall} Some basis definition and blue print of Dual space.
+    \begin{enumerate}
+        \item   $V$ is a f.d.v.s. over $\F$.\\
+                the dual space $V' = \L(V, \F)$ is defined as the set of all linear maps $\varphi: V\to \F $ (linear functionals).
+                Thus
+                \[\dim V' = \dim V\]
+        \item   Suppose $V,W$ are f.d.v.s over $\F$.\\
+                Then there is an isomophic between $T\in \L(V,W) $ and $ T' \in \L(W',V')$\\
+                For any $\varphi \in W'$, define $T' (\varphi) $ as
+                \[(T'(\varphi))(v) = \varphi (Tv)\]
+                
+                % \begin{tikzpicture}
+                %     \draw[] (0,4) -> (4,4) -> (2, 0.6);
+                %     \draw[] (0, 4) -> (2, 0.6);
+                %     \filldraw[white] (0, 4) circle (10pt)  node[black]{$V$};
+                %     \filldraw[white] (4, 4) circle (10pt)  node[black]{$W$};
+                %     \filldraw[white] (2,0.6) circle (10pt)  node[black]{$\F$};
+                % \end{tikzpicture}
+                \[
+                \begin{tikzcd}[row sep=3.5em]
+                V \arrow[dr,"\varphi \circ T" description] \arrow[rr,"T"] && W \arrow[dl, "\varphi \in W'" description]\\
+                & \F
+                \end{tikzcd}
+                \]
+        \item   Let $V$ be a f.d.i.p.s over $\F$\\
+                Recall Riesz representation theorem, define $L^V : \ol{V}\to V' $ as
+                \[(L^V(v))(u) = \varphi^V_v(u) := \inn{u,v}\]
+                Under this definition, we claim that $L'$ is a linear function.\\
+                For any $v\in \ol{V}$, $u \in V$ and $\lambda \in \F$, we have
+                \begin{align*}
+                    (L'(\lambda * v))u &= \inn{u, \ol{\lambda}v}\\
+                    &= \lambda\inn{u,v}\\
+                    &= \lambda\varphi_v(u)\\
+                    &= \lambda(L'(v))(u)
+                \end{align*}
+        \item   Let $V, W$ be f.d.i.p.s., and $T\in \L(V,W)= \L(\ol{V},\overline{W})\ (\star)$\\
+                The $``="$ in $(\star)$ is true since
+                \[T(\lambda * v) = T(\overline{\lambda}v) = \overline{\lambda} Tv = \lambda * Tv\]
+                \begin{center}
+                    \begin{tikzcd}[sep = huge]
+                    \overline{V} \arrow[r, "\varphi^V"]
+                        & V' \\
+                    \overline{W} \arrow[u, "T^*"] \arrow[r, "\varphi^W"]
+                        &  W' \arrow[u, "T'"]
+                    \end{tikzcd}
+                \end{center}
+    
+    \begin{theorem}
+        \[T' \circ \varphi^W = \varphi^V \circ T^*\] 
+
+    \end{theorem}
+
+    \begin{proof}
+        Let $w \in \overline{W}$, $v\in V$ be arbitrary
+        \begin{align*}
+            (T'\varphi^W(w))(v) = T'(\varphi^W_w)(v) = (\varphi^W_w(Tv)) = \inn{Tv,w}\\
+            ((\varphi^VT^*)(w))(v) = (\varphi^V(T^*(w))(v)= \inn{v,T^*(w)} =\inn{Tv,w} 
+        \end{align*}
+
+    \end{proof}
+
+    \end{enumerate}    
+
+\end{document}

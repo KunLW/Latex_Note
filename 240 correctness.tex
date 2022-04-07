@@ -1,0 +1,478 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\newcommand{\F}{\mathbf{F}}
+\newcommand{\M}{\mathcal{M}}
+\renewcommand{\L}{\mathcal{L}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\red}[1]{{\color{Red}#1}}
+\newcommand{\blue}[1]{{\color{Skyblue}#1}}
+\newcommand{\defi}[1]{\textbf{{\color{Orange}Definition: }#1}}
+\newcommand{\theo}[1]{\textbf{{\color{Skyblue}Theorem: }#1}}
+\renewcommand{\d}{\mbox{d}}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inn}[1]{\lan#1\ran}
+\newcommand{\ol}{\overline}
+\renewcommand{\span}{\mbox{span}}
+\renewcommand{\null}{\mbox{null}}
+\newcommand{\res}{\mbox{Res}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\tr}{\mathrm{tr}}
+\renewcommand{\det}{\mathrm{det}}
+\newcommand{\ali}[1]{\begin{align}#1\end{align}}
+\newcommand{\Ali}[2]{\begin{align}#1\end{align}\tag{#2}}
+\renewcommand{\split}[1]{\begin{split}#1\end{split}}
+\newcommand{\ga}[1]{\begin{gather}#1\end{gather}}
+\newcommand{\Ga}[1]{\begin{gather*}#1\end{gather*}}
+\renewcommand{\pm}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\newcommand{\lr}{\leftrightarrow}
+\def\N {{\mathbb N}}
+\def\Z {{\mathbb Z}}
+\newcommand{\Implies}{\mbox{ IMPLIES }}
+\newcommand{\Or}{\mbox{ OR }}
+\renewcommand{\And}{\mbox{ AND }}
+\newcommand{\Not}{\mbox{NOT }}
+\newcommand{\Iff}{\mbox{ IFF }}
+\newcommand{\T}{\mbox{T}}
+\renewcommand{\F}{\mbox{F}}
+\newcommand{\cd}{\cdot \mbox{d}}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\ceil}[1]{\lceil#1\rceil}
+\newcommand{\la}{\leftarrow} 
+\renewcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+
+
+
+
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{correctness}{%
+\section{Correctness}\label{correctness}}
+
+\(\newcommand{\A}{\mathcal{A}}\)
+
+\textbf{Correctness}: An algorithm is correct if it satisfies its
+specifications.
+
+\textbf{A precondition}:
+
+\begin{itemize}
+\item
+  a statement involving variables used in the algorithm.
+\item
+  Says certain facts must be true before an execution of the algorithm
+  begins
+\item
+  it can describe which inputs are allowable.
+\end{itemize}
+
+\textbf{A postcondition}:
+
+\begin{itemize}
+\item
+  statement involving variables used in the algorithm
+\item
+  says certain facts must be true where algorithm ends.
+\item
+  can describe possible correct outputs for a given input
+\end{itemize}
+
+termination: algorithm returns if the precondition hold.
+
+\textbf{Examples}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  search array A for a key k.
+
+  \begin{quote}
+  \emph{Precondition}:Elements of A and k are from some domain (where
+  elements canbe compared)
+
+  \emph{Postcondition}:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    return an integer \(i\) such that \(A[i] =k\) if one exists,
+    otherwise return \(\perp\).
+  \item
+    A is not changed, \(k\) is not changed.
+  \end{enumerate}
+
+  \emph{why A is not changed}
+
+  consider the algerithm
+
+  \(A[1] \leftarrow k \)
+
+  return \((1)\)
+  \end{quote}
+\item
+  binary search \(A\)
+
+  \begin{quote}
+  Precondition: \(A[1,n]\) is sorted in nondereasing order.
+
+  \[(1\leq i\leq j\leq n)\Implies A[i]\leq A[j]\]
+
+  k is from the same domain
+
+  Postcondition: same as above
+  \end{quote}
+\item
+  Sorting an array A
+
+  \begin{quote}
+  Precondition: elements of A are froma totally ordered domainA is
+  nonempty
+
+  Postcondition:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    the multiset of elements in A is not changed.
+  \item
+    A is ordered.
+  \end{enumerate}
+  \end{quote}
+\item
+  Merging arrays \(A\) and \(B\).
+
+  \begin{quote}
+  Precondition: A \& B are sorted in nondecreading order, their elements
+  are from a totally ordered domain.
+
+  Postcondition:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Output C is sorted in nondecreading order.
+  \item
+    Multiset of elements in C = Multiset of elements in \(A\cup B\).
+  \end{enumerate}
+  \end{quote}
+
+  \textbf{def MergeSort(A, n)}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{	if n \textless{}= 1 then return}
+\NormalTok{	m == floor(n / 2)}
+\NormalTok{	A\textquotesingle{} == A[1: m+1]}
+\NormalTok{	A" == A[m+1:]}
+\NormalTok{	MergeSort(A\textquotesingle{}, m)}
+\NormalTok{	MergeSort(A", n {-} m)}
+\NormalTok{	A == Merge(A\textquotesingle{}, A")}
+\end{Highlighting}
+\end{Shaded}
+
+Mergesort(A, n)
+
+1 if \(n\leq 1\) then return
+
+2 \(m\leftarrow \lfloor n/2\rfloor\)
+
+3 \(A' \leftarrow [1,...,m]\)
+
+4 \(A'' \leftarrow [m+1,...,n]\)
+
+5 Mergesort(A', m)
+
+6 Mergesort(A'', n-m)
+
+7 \(A\leftarrow\) Merge(A', A")
+
+\textbf{Proof of correctness}
+
+Assuming Merge is correct
+
+For \(n\in \Z^+\), let \(P(n) = \)
+
+''for all arrays \(A[1,...,n]\) with elements from a totally ordered
+set,
+
+if MergeSort(A,n) is performed, then it eventually \emph{halts};
+
+at which times A is \emph{sorted} in \emph{nondecreasing} 0rder \& the
+\emph{multiset} of elements in A is \emph{unchanged}''
+
+\textbf{Proof:}
+
+Let \(n\in \Z^+\) be arbitrary
+
+Let \(A[1,...,n]\) be an arbitrary array that satisfy the precondition.
+
+Consider Mertgesort(A, n)
+
+Base case \(n =1\)
+
+The test on line 1 is true \& A is unchanged
+
+Since \(A[1,...,n]\) has only 1 element it is sorted
+
+By generalization, this is true for all array A, Hence \(P(1)\) is true.
+
+Induction step \(n>1\). Suppose \(P(n')\) is true for all \(n'\in \Z^+\)
+such that \(n'<n\). (strong induction assumption)
+
+The test on line 1 fails
+
+and \(m =\lfloor n/2\rfloor \) from line 2
+
+Then \(m\leq n-m =\lceil n/2\rceil < n\)
+
+By the induction hypothesis after
+
+lines 5 \& 6, A' and A'' are sorted
+
+in nondecreading order,
+
+the multiset of elements in A' = multiset of elements in \(A[1,...,m]\)
+
+the multiset of elements in A'' = multiset of elements in
+\(A[m+1,...,n]\)
+
+From the correctness of Merge
+
+after line 7,
+
+A{[}1,...,n{]} is in nondecreading order
+
+the multiset of elements in \(A\) is the the multiset of elements in the
+union of A' and A''
+
+Hence the multiset of elements in A is unchanged
+
+Hence \(P(n)\) is true
+
+By strong induction \(\square\)
+
+\hypertarget{analysis-of-algorithms-running-time}{%
+\subsection{Analysis of Algorithms (Running
+Time)}\label{analysis-of-algorithms-running-time}}
+
+For an algorithm \(A\), let \(t_A(I)\) be \# steps \(A\) preforms on
+input \(I\).
+
+\textbf{define a function \texttt{LinearSearch(L,\ x)}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{	i = 1}
+\NormalTok{	while i \textless{}= length(L)}
+\NormalTok{		if L[i] == x, then return i}
+\NormalTok{		i += 1}
+\NormalTok{	return 0}
+\end{Highlighting}
+\end{Shaded}
+
+Here we define steps to be
+
+Step: comparision with \(x\) or equivalently array access
+
+Express running time as a function of the size of the input.
+
+\hypertarget{worstcase-time-complexity}{%
+\paragraph{Worstcase time complexity}\label{worstcase-time-complexity}}
+
+Denote \(T_A: \N\to \N\) as
+
+\[T_A(n) = \max\{t_A(I)|I \mbox{ is an imput to A and size(I) is n} \}\]
+
+\(T_{\mbox{LinearSearch}} = n\)
+
+\hypertarget{average-case-time-complexity}{%
+\paragraph{Average case time
+complexity}\label{average-case-time-complexity}}
+
+Denote \(T_A': \N\to \R^*\) as
+
+\[T_A'(n) = E_{I\in S_n}[t_A(I)]\]
+
+Expectation in taken over a probability space of all inputs of
+size \(n\).
+
+If all inputs of size \(n\) are equality likely then
+
+\[T_A'(n) = \frac{\sum\{t_A(I)|size(I) =n \}}{\#\{I|size(I) =n \}}\]
+
+\hypertarget{consider-the-worst-case-complexity-uxatuxaauxauxamuxauxanuxauxa-of-an-algorithm-uxaauxa}{%
+\paragraph{\texorpdfstring{Consider the worst case complexity
+\(T_A(m,n)\) of an algorithm
+\(A\).}{Consider the worst case complexity T\_A(m,n) of an algorithm A.}}\label{consider-the-worst-case-complexity-uxatuxaauxauxamuxauxanuxauxa-of-an-algorithm-uxaauxa}}
+
+Before analyzing analgorithm, we first need to define:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  complexity measure: what is a step
+\item
+  inputsize (is it \(n\) or \(m\)?)
+\end{enumerate}
+
+\hypertarget{upper-bound-uxauuxa-and-lower-bound-uxaluxa}{%
+\paragraph{\texorpdfstring{Upper bound \(u\) and Lower bound
+\(l\).}{Upper bound u and Lower bound l.}}\label{upper-bound-uxauuxa-and-lower-bound-uxaluxa}}
+
+\(u: \N\to \N\)
+
+\(A\) has worst case time complexity at most \(u\) means \(T_A\leq u\)
+
+\[\forall n\in \N.\max\{t_A(I)|I \in \A \And size(I)=n \}\leq u(n)\\\]
+
+where \(\A\) is the set of all inputs to \(A\).
+
+\[\forall n\in\N. \forall I \in \A. [size(I) = n \Implies t_A(I)\leq u(n)]\\
+\forall I \in \A. [t_A(I)\leq u(size(I))]\]
+
+\(T_A\in O(u)\)
+
+\[f:\N\to\N\\
+O(f) = \{g:\N\to\N|\exists c\in R^+\exists b\in \N\forall n \in \N. [(n\geq b)\Implies (g(n)\leq cf(n))] \}\]
+
+\(l: \N\to\N\)
+
+\(A\) has worst case time complexity at least \(l\) means
+\(T_A \geq l\).
+
+\[\forall n\in \N.\max\{t_A(I)|I \in \A \And size(I)=n \}\geq u(n)\]
+
+\(T_A\in \Omega(l)\)
+
+Example: \textbf{Define a function \texttt{Square(n)}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{if n == 1, then return 1}
+\NormalTok{else return 2 * n {-} 1 + Square(n {-} 1)}
+\end{Highlighting}
+\end{Shaded}
+
+Denote \(T_{SQ}: \Z^+ \to \N\) as \(T_{SQ}(n) = \) "\# the arithmetic
+operator performened by \texttt{Square(n)}".
+
+Then we know that \(T_{SQ}(1) = 0\) and
+
+\[T_{SQ}(n) = 4 + T_{SQ}(n-1), \ \forall n \in \N. n> 1\tag{$\star$}\]
+
+\((\star)\) is true since we have \texttt{*,\ -,\ +,\ -} four operators
+to get the result of \texttt{Square(n)} from \texttt{Square(n-1)}.
+
+After solving the recurrence problem, we see that
+
+\[T_{SQ}(n) = 4(n-1)\]
+
+Worse case Analysis of MergeSort
+
+Denote \(M(n) = T_{MergeSort}(n)\)
+
+Thus, we know that
+
+\[M(n) \leq \left\{
+\ali{&c &,\mbox{ if } n = 1\\
+&M(\ceil{n/2} + \floor{n/2}+ dn&,\mbox{ if } n > 1 }
+\right.\]
+
+where \(c, d\) are constant
+
+\end{document}

@@ -1,0 +1,158 @@
+\documentclass{aq-notes}
+\usepackage{formal}
+\usepackage{amsmath, amssymb}
+\newcommand{\Range}{\mbox{\normalfont Range}}
+\newcommand{\Null}{\mbox{\normalfont Null}}
+\newcommand{\Span}{\mbox{\normalfont span}}
+\title{\bf Jordan start with nilpotent}
+\course{MAT247}
+\author{Kunlong Wu}
+\begin{document}
+\section{Base for nilpotent operators}
+
+\begin{definition}[basic]
+    We say $N$ ``basic'' with $(e_1,...,e_2)$ if the basis $(e_1,...,e_n)$ satisfy
+    \[Ne_1= 0,Ne_2 = e_1,...,Ne_n= e_{n-1}\]
+\end{definition}
+\begin{lemma}
+    Suppse $\dim \Null(N^i) = i$ for $i\in \{1,...,n\}$, then
+    \[N \mbox{ is basic with some basis}\]
+    \begin{proof} proof by two steps.
+        \begin{itemize}
+            \item {\scshape Step 1:} Claim: for $1\leq i\leq n$, $N(\Null(N^i)) = \Null (N^{i-1})$
+            \begin{proof}[Proof of step 1]
+                If $v\in \Null N^i$, then $0 = N^iv = N^{i-1}(Nv)$. Thus, $Nv\in \Null N^{i-1}$.\\ 
+                i.e, $N(\Null(N^i)) \subseteq \Null (N^{i-1})$ \\
+                Denote $N_0\in \mathcal{L}(\Null N^i, \Null N^{i-1})$ as $N_0v = Nv$
+                \begin{align*}
+                    \dim \Range N_0 + \dim \Null N_0 = \dim \Null N^i\\
+                    \dim \Range N_0 + 1 = \dim \Null N^i
+                \end{align*}
+                Therefore $\dim \Range N_0 = i-1$, it follows that $N_0$ is surjective. i.e, $\Null (N^{i-1})\subseteq N(\Null(N^i))$
+            \end{proof}
+            \item {\scshape Step 2:} Let $e_1\in \Null (N)\setminus \{0\}$.\\
+            Pick $e_2 \in \Null (N^2)$ such that $Ne_2 = e_1$. Repeat picking, we get
+            \[E  = (e_1,...,e_n) \mbox{ such that } e_i \in \Null(N^i), Ne_i = e_{i-1} i\geq 2\]
+            rewrite it, we see there is exists $e$ such that $E= (e,Ne,...,N^{n-1}e)$
+            \vspace{1em}
+            \item {\scshape Step 3:} Check it is linearly independent.\\
+            Suppose it is not linearly independent, then there is a non-trivial solution $a_1,...,a_n$ such that
+            \[\sum_{i=1}^na_ie_i = 0\]
+            Let $m$ be the largest index such that $a_m \neq 0$.\\
+            Then \[0 = \sum a_ie_i \Rightarrow 0 = N^{m-1}\sum a_ie_i = a_me_1\] Contradiction.
+        \end{itemize}
+    \end{proof}
+\end{lemma}
+\section{Jordan for Nilpotent}
+    \begin{theorem}\label{theo:jordan nilp}
+        Suppose $V\in \mathbf{F}^n$ be f.d.v.s., $N\in \mathcal{L}(V)$ is a nilpotent, then we can decompose $V$ into subspace $V_1,...,V_m$ such that 
+        \[ V = \bigoplus_{i=1}^m V_i\]
+        \begin{enumerate}
+            \item $N$ preserves each $V_i$
+            \item $N\vert {V_i}$ are basic nilpotent operator
+        \end{enumerate}
+    \end{theorem}
+
+    \begin{example}
+        $\dim V = 3,N^2 =0, \dim \Range(N) = 1$\\
+        Suppose \[\Range(N) = \bigoplus_{i=1}^m\Range(N\vert {V_i})\]
+        Therefore, wlog $\Range (N\vert {V_1}) = \Range(N)$ and $N\vert {V_i} = 0\vert {V_1}$ for $i > 1$.\\
+        Denote $e,f$ as $\Range (N) = \Span (e)$, and $e = Nf$, then $V_1:= \Span(e,f)$\\
+        We know that $\Null (N) = 2$ and $e\in \Null(N)$, then denote $g$ as $\Null(N) = \Span(e,g)$. Then $V_2 := \Span(g)$
+    \end{example}
+
+    \begin{proof}[Proof of Theorem \ref{theo:jordan nilp}]
+        Proceed by induction on $\dim V$.
+        \begin{itemize}
+            \item {\scshape Step 1}: $\dim \Range(N)< \dim V$, and $N$ \textbf{preserves} $\Range(N)$. \\
+            Thus, we apply induction to $(\Range(N), N\vert {\Range(N)})$
+            \item {\scshape Step 2}: By induction hypthesis, we can find a basis for $\Range(N)$ as follows:
+            \[e_1,...,e_k\mbox{ such that }\Range(N) = \bigoplus_{i=1}^kW_i\ ,\] where $W_i = \Span(e_i,Ne_i,...N^{m_i}e^i)$, where $m_i$ satisfy $N^{m_i}e_i \neq 0$ but $N^{m_i+1}e_i = 0$ \\
+            Denote $\epsilon = \{N^je_i | \forall 0\leq j\leq m_i, 1\leq i \leq k)\}$. Then we see that 
+            \[\Range(N) = \Span(r) \]
+            \item {\scshape Step 3}: Let $\sigma = (f_1,...,f_k), f_i\in V$, be such that $Nf_i = e_i$.\\
+            Claim $(\epsilon, \sigma)$ are linearly independent.
+            \begin{proof}[Proof of the claim]
+                We already know that $\epsilon$ is linearly independent, so suppose $f_1$ is involved, i.e., has non-zero coefficient.\\
+                Then, after apply $N$, we find a linearly dependent that does not involving $f$s, which comes a Contradiction.
+            \end{proof}
+            \item {\scshape Step 4}: For $1\leq i\leq k$, define \[V_i := \Span(f_i,e_i,Ne_i,...,N^{m_i}e_i) = \Span(f_i,Nf_i,...,N^{m_i+1}f_i),\] where $N^{m_i+2}f_i = 0$
+            \item Let $f_{k+1},...,f_m\in V$ be such that $(f_1,...,f_m,e_1,...,N^{m_1}e_1,...,e_k,...,N^{m_k}e_k)$ is the basis of $V$.\\
+            Note: for each $j$ such that  $k+1\leq j\leq m$, we have
+            \[Nf_j \in \Range(N) = \Span(N^je_i)\]
+            Therefore, there exists $g_j\in \Range(N)$ such that $Ng_j = Nf_j$. Define $f_j' := f_j-g_j$, then 
+            \[(f_1,...,f_k,f'_{k+1},...,f'_m,e_1,...,N^{m_1}e_1,...,e_k,...,N^{m_k}e_k)\mbox{ is still a basis of }V\]
+            \item {\scshape Step 5}: For $k+1\leq j \leq m$, define $V_j := \Span(f'_j)$, then
+            \[V = \bigoplus_{i=1}^m V_j\]
+            \[N\vert {V_j} \mbox{ is a basis for each }j\]
+        \end{itemize}
+        
+    \end{proof}
+\section{Extend Jordan form to all linear operators}
+    Let $T\in \mathcal{L}(V)$ be any arbitrary linear operator over $V$.
+    \[V = \bigoplus_{j=1}^kG(\lambda_j,T)\]
+    Then, we see that 
+    \[(T-\lambda_jI)\vert {G(\lambda_j,T)} \mbox{ is nilpotent}\]
+    thus they can put it in Jordan form and preserves in there generalized eigenspace.\\
+    Therefore, $T$ can generate a Jordan form matrix.
+
+\section{Invariant of Jordan Form}
+\begin{theorem}
+    Let $V$ be f.d.v.s., $N\in \mathcal{L}(V)$ be nilpotent operator
+    \[\exists V = \bigoplus_{i=1}^mV_i. \mbox{ such that $N$ preserves $V_i$.}\]
+    Let $a_j$ be the number of terms in the decomposition of dimention $j$.\\
+    The sequence $(a_1,...,a_j)$ is determined by $N$.
+\begin{proof}
+
+Suppose $V = \Span(e_1,...,e_k)$, such that $Ne_1=0, Ne_i = e_{i-1}$. Then we see that
+\[\dim \Null(N) = 1, \dim \Null(N^2) = 2,\ \cdots,\dim \Null(N^k) = k, \dim \Null(N^{k+1}) = k.\]
+Therefore, if $(W,N)$ is such that $\dim W = k$ and N is a basic nilpotent, then \[\dim \Null(N^j) = \min(j,k).\]
+\begin{align*}
+    \dim \Null N^j &= \sum\dim \Null N^j\vert {V_i}\\
+&=a_1\min(j,1)+a_2\min(j,2)+\cdots
+\end{align*}
+Define $n_j  = \dim\Null N^j$, then
+\begin{align*}
+    n_1 &= a_1+a_2+\cdots\\
+    n_2 &= a_1+2a_2+2a_3+\cdots\\
+    n_3 &= a_1+2a_2+3a_3+3a_4+\cdots
+\end{align*}
+Then, subtract consecutive equations
+\begin{align*}
+    n_2-n_1 &= a_2+a_3+\cdots\\
+    n_3-n_2 &= a_3+a_4+\cdots\\
+    n_4-n_3 &= a_4 + a_5+ \cdots
+\end{align*}
+Then we got
+\begin{align*}
+    	2n_1-n_2&= a_1\\
+    	-n_1+2n_2-n_3 &= a_2\\
+    	\vdots\\
+    	-n_k+2n_{k+1}-n_{k+2} &= a_{k+1}
+\end{align*}
+\end{proof}
+\end{theorem}
+
+
+\begin{corollary}\label{cor:observation}
+    \[\dim\Null(N^{{j+2}}) - \dim\Null (N^{j+1})\leq \dim \Null N^{j+1}-\dim\Null N^j\]
+\end{corollary}
+\begin{example}
+    If $\dim\Null N = 3,\dim \Null N^2 = 5$, then $\dim\Null N^4 \leq 9$
+\end{example}
+
+
+\begin{proof}[Alternative proof of \ref{cor:observation}]
+    Idea: Apply rank-Nullity thm to subspaces of V.\\    
+    It is easy to see that $\Null(N^j\vert {\Null(N^{j+1})}) =\Null N^j$\\
+    Thus \[\dim\Null N^{j+1} - \dim\Null N^j = \dim \Range(N^j\vert {\Null(N^{j+1})})\]
+    \[\dim\Null N^{j+2} - \dim\Null N^{j+1} = \dim \Range(N^{j+1}\vert {\Null(N^{j+2})})\]
+    Claim: $\Range(N^{j+1}\vert {\Null(N^{j+2})})\subset \Range(N^j\vert {\Null(N^{j+1})})$
+\begin{proof}[proof of claim]
+        Let $v\in \Null(N^{j+2}) \Rightarrow Nv\in \Null(N^{j+1})$.Then, 
+        \[N^{j+1}v = N^j(Nv)\in \Range(N^j\vert {\Null(N^{j+1})})\]
+\end{proof}Therefore,
+\[\dim \Range(N^{j+1}\vert {\Null(N^{j+2})})\leq \dim\Range(N^j\vert {\Null(N^{j+1})})\]
+\end{proof}
+
+\end{document}

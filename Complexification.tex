@@ -1,0 +1,218 @@
+\documentclass{aq-notes}
+% \usepackage{favorcmd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\res}{\mbox{\normalfont Res}}
+\title{Complexification}
+\author{Kunlong Wu}
+\date{22.3.15}
+\begin{document}
+\section{Basic Definition of Complexification}
+    \begin{definition}
+        Let $V$ be a real vector space. We define $V_\mathbb{C}$ as follows:
+        \begin{enumerate}
+            \item {\bf Set}: The underlying set is $V\times V$. 
+            (any vector in it can be writen as $(v_1,v_2)$ for any $v_1,v_2\in V$)
+            \item {\bf Addtion}: $(v_1, v_2) + (v'_1, v'_2) := (v_1+v'_1, v_2+v'_2) $
+            \item {\bf Scalar}: $(a + bi)(u_1,u_2) := (au_1-bu_2,bu_1+au_2)$
+        \end{enumerate}
+    \end{definition}
+\begin{claim}
+            This makes $V_\mathbb{C}$ into a complex vector space. 
+            (i.e., This definition of $V_\mathbb{C}$ satisfy the 
+            axiom of complex vector space)
+\end{claim}
+    \begin{proof}
+        The ``HARD'' part is : Let $\lambda_1, \lambda_2 \in \mathbb{C}, (v_1,v_2)\in V_\mathbb{C}$\\
+        Then, $\lambda_1(\lambda_2(v_1,v_2)) = (\lambda_1\lambda_2)(v_1,v_2)$\\
+    \end{proof}
+    Now we have a natural injection $V \hookrightarrow V_\mathbb{C}$ such that $v \mapsto (V, 0)$\\
+    In this way, we can think of $V$ as a subset of $V_\mathbb{C}$
+
+    \begin{remark}
+        
+        $(0,v) = i(v,0) = iv$\\
+        i.e., $(v_1,v_2) = (v_1,0) + (0, v_2)  = v_1 + iv_2$\\
+        Tensor Product $V_\mathbb{C} = V\bigotimes_\mathbb{R} \mathbb{C}$
+    \end{remark}
+    \begin{lemma}
+        if $(e_1,...,e_n)$ is a basis for $V$, then it is also a basis for $V_\mathbb{C}$
+    \end{lemma}
+    \begin{proof}
+        Suppose we have $v_1 + iv_2 \in V_\mathbb{C}$, write $\displaystyle v_j = \sum a_je_j, v_2 = \sum b_j e_j i$\\ 
+        where $ a_j, b_j \in \mathbb{R}$\\
+        Then we have $v_1 + iv_2 = \sum (a_j + ib_j)e_j$.\\ 
+        Since $(a_j, + ib_j) \in \mathbb{C}$, $\mbox{span} (e_1,...,e_n) = V_\mathbb{C}$\\[1em]
+        Suppose $\displaystyle 0 = \sum \lambda_je_j = \sum a_je_j + i b_je_j$\\
+        Since $e_1,...,e_n$ are linearly independent over $\mathbb{R}$, it follows that $a_j = b_j  = 0$\\
+        Therefore, $\lambda_j = 0$. i.e., $(e_1,...,e_n)$ linearly independent over $V_\mathbb{C}$
+    \end{proof}
+    \section{Linear Maps Over $V_\mathbb{C}$}
+    Suppose $V, W$ are real vector space and $T \in \mathcal{L}(V,W)$,\\ 
+    we define $T_\mathbb{C} \in \mathcal{L}(V_\mathbb{C}, W_\mathbb{C})$ as follows:
+    \[T_\mathbb{C} (v_1 + iv_2) = Tv_1 + i Tv_2\]
+
+\begin{claim}
+        Under the same basis in real vector space, the matrix of $T$ and $T_\mathbb{C}$ are same.\\ 
+        (Notice: we can not choose a basis in complex vecotr space for $T$)
+\end{claim}
+    \begin{theorem}
+        Let $V$ be f.d.v.s. over $\mathbb{R}$, $T\in \mathcal{L}(V)$. Then there exists an invariant subspace $U$ that has dimension 1 or 2.\\
+        i.e.,
+        \[\exists U \subseteq V.( T(U) \subset U \wedge \dim U = 1\ or \ 2)\]
+        \begin{proof}
+            $T_\mathbb{C}$ has an eigenvector $u + iv$ with eigenvalue $\lambda = a + bi\in \mathbb{C}$\\
+            $T_\mathbb{C}(u+ iv) = Tu + i Tv = (a+ bi)(u + iv)$ implies $Tu = au - bv \wedge Tv = av + bu$\\
+            Therefore, $U = \mbox{span}(u,v)$
+        \end{proof}
+    \end{theorem}
+
+\begin{claim}
+        There is a natural isomophism between $V_\mathbb{C}$ and $\overline{V_\mathbb{C}}$. This is used below.
+        \[\overline{(a+ib)(v_1+iv_2)} = (a-ib)(v_1 - iv_2)\]
+        Conside it as rotation, this isomophism will become intuitively.
+\end{claim}
+    \begin{theorem}
+        Let $V$ be 2-D i.p.v.s over $\mathbb{R}$, $T\in \mathcal{L}(V)$ is normal.\\
+        Then in any orthonormal basis $\vec e$.
+        \begin{enumerate}
+            \item if T self-adjoint $(T=T^*)$, then $\displaystyle M(T, \vec e) = 
+            \begin{bmatrix}
+                a & b \\
+                b & c
+            \end{bmatrix}$
+            \item if T is not self-adjoint $(T\neq T^*)$, then $\displaystyle M(T, \vec e) = 
+            \begin{bmatrix}
+                a & b \\
+                -b & a
+            \end{bmatrix}$
+        \end{enumerate}
+        \begin{proof}
+            (1) is easy.\\
+            WTS (2), Assume $T\neq T^*$\\
+            Using complex spectral theorem, there exists an ONB such that $\vec f = (f_1, f_2)$ of eigenvecotrs for $T_\mathbb{C}$ with eigenvalue $\lambda_1, \lambda_2$.\\
+            Since $T_\mathbb{C}$ is not self-adjoint, $\lambda_1, \lambda_2$ are not both in $\mathbb{R}$\\
+            WLOG (without loss of generality) $\lambda_1 \not \in \mathbb{R}$,\\ 
+            we claim $\lambda_2 = \overline{\lambda_1}$ by change eigenvectors of $\lambda_1$ into conjugate vector space\\
+            Then we conclude that 
+            \begin{align*}
+                M(T_\mathbb{C},\vec f) &= \begin{bmatrix}
+                    \lambda_1 & 0\\
+                    0 & \overline{\lambda_1}
+                \end{bmatrix}\\
+                M(T_\mathbb{C} + T^*_\mathbb{C},\vec f) &= \begin{bmatrix}
+                    2\Re\lambda_1 & 0\\
+                    0 & 2\Re{\lambda_1}
+                \end{bmatrix}\\
+            \end{align*}
+            We conclude:\\
+            Let $\vec e$ be any ONB for $V$ and
+            \[\displaystyle M(T, \vec e) = 
+            \begin{bmatrix}
+                a & b \\
+                c & d
+            \end{bmatrix}\]
+            Then, we see that
+            \[\displaystyle M(T+ T^*, \vec e) = 
+            \begin{bmatrix}
+                2a & b+c \\
+                b+c & 2d
+            \end{bmatrix}\]
+            Therefore, $b = -c$ and $a =d$.
+        \end{proof}
+    \end{theorem}
+\begin{corollary}
+        If further $T$ is an isomertry, then $\displaystyle M(T, \vec e) = 
+        \begin{bmatrix}
+            \cos\theta & \sin\theta \\
+            -\sin\theta & \cos\theta
+        \end{bmatrix}$, where $\theta \in [0,2\pi]$.
+\end{corollary}
+    \begin{theorem}
+        Let $T$ be an isometry on a real f.d.i.p.s. $V$, then there exists ONB $\vec e$ such that
+        \[M(T, \vec e) = 
+        \begin{bmatrix}
+            \begin{matrix}
+                r_1 &  &  \\
+                 & \ddots & \\
+                 &  & r_n
+            \end{matrix} & \makebox(0,0){\text{\huge0}} \\
+            \makebox(0,0){\text{\huge0}}& \begin{matrix}
+                \begin{bmatrix}
+                    \cos\theta_{n+1} & \sin\theta_{n+1} \\
+                    -\sin\theta_{n+1} & \cos\theta_{n+1}
+                \end{bmatrix} &  & \\
+                 & \ddots & \\
+                 &  & \begin{bmatrix}
+                    \cos\theta_m & \sin\theta_m \\
+                    -\sin\theta_m & \cos\theta_m
+                \end{bmatrix}
+            \end{matrix}
+        \end{bmatrix}\]
+        where $r_i = \pm 1, \theta \in [0, 2\pi]$ 
+        To understand this matrix, we see that $r_i = 1$ means do nothing, 
+        $r_i = -1$ means flipped and $\theta$ means rotation.
+        \begin{proof}Prove by 6 steps
+\begin{itemize}
+        \item {\scshape Step 1}: 
+                By the theorem, there e.xists a subspace $W \subseteq V$ such that $\dim W = 1\ or \ 2$ , $T(W)\subseteq W$.
+        \item {\scshape Step 2}: 
+                $T$ is normal, so $W, W^\perp$ are invariant under $T, T^*$
+        \item {\scshape Step 3}: 
+                $\displaystyle (T\vert_W)^* = T^*\vert_W, (T\vert_W^\perp)^* = T^*\vert_W^\perp$
+        \item {\scshape Step 4}: 
+                Theorem true for $W^\perp$ by induction hypothesis there exists an ONB $B_{W^\perp}$ satisfy the $W^\perp$.
+        \item {\scshape Step 5}: 
+                If $\dim W = 1$ then true for $(W, T\vert W)$\\
+                If $\dim W = 2$
+                \begin{enumerate}
+                    \item $T\vert_W$ is self-adjoint, then there exists ONB $B_W$for operator that let the matrix diagonal.\\
+                        Since $T\vert_W$ is isometry, it follows that all eigenvalue are $\pm 1$.
+                    \item $T\vert_W$ is not self-adjoint, then we have already shown in above.
+                \end{enumerate}
+        \item {\scshape Step 6}: 
+                Set $\vec B = \vec B_{W^\perp} \cup \vec B_W$
+\end{itemize}
+        \end{proof}
+    \end{theorem}
+    \begin{theorem}
+        Let $V$ be a f.d.v.s over $\mathbb{R}$, and $T\in \mathcal{L}(V)$. If $\dim V$ is odd, then $T$ has an eigenvalue.
+    \end{theorem}
+    \begin{lemma}
+    Let $V$ be a f.d.v.s over $\mathbb{R}$, $T\in \mathcal{L}(V)$, then
+    \[T \mbox{ is invertiable} \iff T_\mathbb{C} \mbox{ is invertiable}\]
+    \end{lemma}
+    \begin{lemma}
+    Let $(V, T)$ as above, $r\in \mathbb{R}$, then
+    \end{lemma}
+    \begin{lemma} 
+    \begin{center}
+            $r$ is an eigenvalue of $T$  $\iff$ $r$ is an eigenvalue of $T_\mathbb{C}$
+        \end{center}
+    \end{lemma}
+        \begin{lemma}
+        Let $(V, T)$ as above, $\lambda\in \mathbb{C}$, then
+            \[\dim E(\lambda, T_\mathbb{C}) = \dim E(\overline{\lambda}, T_\mathbb{C})\]
+    \end{lemma}
+    \begin{proof}
+        Let $v = v_1+v_i2i\in V\times V$, where $v_1,v_2\in V$, then $\overline{v} = v_1-v_2i$ .\\
+        $T_\mathcal{C}\overline{v} = TTv_1-iTv_2 = \overline{Tv_1+iTv_2} = \overline{T_\mathcal{C}v} = \overline{\lambda}\overline{v}$\\
+    \end{proof}
+\begin{remark}
+    \[v_1,...,v_m\ lin.ind. \iff \overline{v_1},...,\overline{v_m}\ lin.ind.\]
+    The conjugate of a basis for $E(\lambda, T_\mathcal{C})$ is a basis for $E(\overline{\lambda}, T_\mathcal{C})$
+\end{remark}
+    \begin{lemma}
+    $T\in \mathcal{L}(V), a\neq b$, then \[\mbox{null}((T-aI)(T-bI)) = \mbox{null}(T-aI)\oplus\mbox{null}(T-bI)\]
+    \end{lemma}
+    \begin{lemma}
+    $S,T\in \mathcal{L}(V)$. Suppose $ST=TS$, then 
+    \[\mbox{null}(S), \mbox{Range}(S) \mbox{ are preserved by }T\]
+    \end{lemma}
+Other things see in complexification2
+\section{Restriction of Scalars}
+\begin{definition}
+    Suppose that $V$ is a complex vector space. We denote the Restriction of Scalars , written $\res{V}$, to be the real vector space.\\
+    such that is same with complex vector space excepts we only scalar with real numbers.
+\end{definition}
+\end{document}

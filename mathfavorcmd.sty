@@ -1,0 +1,50 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mathfavorcmd}[2022/03/09 math command for MAT247, MAT157 Kunlong Wu]
+%\package use
+\RequirePackage{xcolor}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{geometry}
+% Math
+\newcommand{\F}{\mathbf{F}}
+\newcommand{\M}{\mathcal{M}}
+\renewcommand{\L}{\mathcal{L}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\red}[1]{{\color{Red}#1}}
+\newcommand{\blue}[1]{{\color{Skyblue}#1}}
+\newcommand{\defi}[1]{\textbf{{\color{Orange}Definition: }#1}}
+\newcommand{\theo}[1]{\textbf{{\color{Skyblue}Theorem: }#1}}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inn}[1]{\lan#1\ran}
+\newcommand{\ol}{\overline}
+\renewcommand{\span}{\mbox{span}}
+\renewcommand{\null}{\mbox{null}}
+\newcommand{\res}{\mbox{Res}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\lr}{\leftrightarrow}
+\newcommand{\cd}{\cdot \dd}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+% For Logic
+\newcommand{\Implies}{\mbox{ \footnotesize IMPLIES }}
+\newcommand{\Or}{ \mbox{ \footnotesize OR }}
+\renewcommand{\And}{ \mbox{ \footnotesize AND }}
+\newcommand{\Not}{ \mbox{\footnotesize NOT }}
+\newcommand{\Iff}{ \mbox{\footnotesize IFF }}
+\newcommand{\True}{ \mbox{T}}
+\newcommand{\False}{ \mbox{F}}
+
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\ceil}[1]{\lceil#1\rceil}
+
+
+
+
+
