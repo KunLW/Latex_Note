@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.11)  5 APR 2022 17:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.11)  6 APR 2022 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.tex"
-(/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.tex
+**"/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.tex"
+(/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/texmf-local/tex/latex/local/aq-notes.cls
 Document Class: aq-notes 2019/11/17 Notes Template
@@ -587,79 +587,45 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 \c@theorem=\count308
 \c@example=\count309
-) (/usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-Package: formal 2022/03/09 formal prove environment Kunlong Wu
- (/usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-Package: smartref 2002/02/28 v1.9 Increase reference capability (deep reference)
-\c@@smartlistlen=\count310
-\c@less@smartlist=\count311
-\c@@currsmartlistplace=\count312
-\sm@rtintern@ltok=\toks45
 )
-\c@linenum=\count313
-
-Defining \sgetlinenumval ...
-Defining \slinenumref ...
-Defining \sreflinenumref ...
-Defining \linenumref ...
-\c@ind=\count314
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen283
-\ar@mcellbox=\box65
-\extrarowheight=\dimen284
-\NC@list=\toks46
-\extratabsurround=\skip73
-\backup@length=\skip74
-\ar@cellbox=\box66
-)
-\TX@col@width=\dimen285
-\TX@old@table=\dimen286
-\TX@old@col=\dimen287
-\TX@target=\dimen288
-\TX@delta=\dimen289
-\TX@cols=\count315
-\TX@ftn=\toks47
-)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 28.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 6.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux)
-\openout1 = `"240 laguage theory DFA NFA.aux"'.
+) (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux)
+\openout1 = `"Trace and Determinent.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
- (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
-\scratchdimen=\dimen290
-\scratchbox=\box67
-\nofMPsegments=\count317
-\nofMParguments=\count318
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count319
-\MPscratchDim=\dimen291
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count310
+\scratchdimen=\dimen283
+\scratchbox=\box65
+\nofMPsegments=\count311
+\nofMParguments=\count312
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count313
+\MPscratchDim=\dimen284
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -702,8 +668,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 28.
-Package hyperref Info: Link coloring ON on input line 28.
+(lastpage)             ! on input line 6.
+Package hyperref Info: Link coloring ON on input line 6.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -711,90 +677,65 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count316
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
- (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out) (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out)
+LaTeX Info: Redefining \ref on input line 6.
+LaTeX Info: Redefining \pageref on input line 6.
+LaTeX Info: Redefining \nameref on input line 6.
+ (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out) (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out)
 \@outlinefile=\write4
-\openout4 = `"240 laguage theory DFA NFA.out"'.
+\openout4 = `"Trace and Determinent.out"'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 32.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 32.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 32.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 9.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 32.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 9.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 32.
+(Font)              <10> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 32.
+(Font)              <7> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 32.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+(Font)              <5> on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-] [2] [3] [4] [5] [6]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 375.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 375.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 375.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 375.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lambda' on input line 375.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 375.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--396
- 
- []
-
-
+) 
 AED: lastpage setting LastPage
-[7] (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux)
-Package rerunfilecheck Info: File `"240 laguage theory DFA NFA".out' has not changed.
-(rerunfilecheck)             Checksum: 0B0E5F47DF395CE302E31F4FF50A3236;1621.
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+] (/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux)
+Package rerunfilecheck Info: File `"Trace and Determinent".out' has not changed.
+(rerunfilecheck)             Checksum: 801866C2EEBA5D7ABB52CB51CB5DA7C8;68.
  ) 
 Here is how much of TeX's memory you used:
- 23737 strings out of 478994
- 433312 string characters out of 5858184
- 728951 words of memory out of 5000000
- 40673 multiletter control sequences out of 15000+600000
- 489789 words of font info for 90 fonts, out of 8000000 for 9000
+ 23274 strings out of 478994
+ 425576 string characters out of 5858184
+ 713144 words of memory out of 5000000
+ 40285 multiletter control sequences out of 15000+600000
+ 450823 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,103p,633b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsco10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.pdf" (7 pages, 267840 bytes).
+ 102i,11n,103p,609b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on "/Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.pdf" (1 page, 148866 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 56 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

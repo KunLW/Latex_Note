@@ -2,8 +2,8 @@ PWD /Users/wukunlong/Documents/2022 Winter local/Latex_Note
 INPUT /usr/local/texlive/2021/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.tex
-OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.log
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.tex
+OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.log
 INPUT /usr/local/texlive/texmf-local/tex/latex/local/aq-notes.cls
 INPUT /usr/local/texlive/texmf-local/tex/latex/local/aq-notes.cls
 INPUT /usr/local/texlive/texmf-local/tex/latex/local/aq-notes.cls
@@ -988,62 +988,15 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/texmf-local/tex/latex/local/formal.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/smartref/smartref.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux
-OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux
+OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1102,23 +1055,22 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestri
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.pdf
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.pdf
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+OUTPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -1169,58 +1121,22 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib5.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmro10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmcsco10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.aux
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/240 laguage theory DFA NFA.out
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.aux
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
+INPUT /Users/wukunlong/Documents/2022 Winter local/Latex_Note/Trace and Determinent.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmcsco10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr10.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr7.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmro10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
